@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+function getUserData(id, callback) {
+
+    setTimeout(() => {
+
+        const user =[
+        {
+            id: id,
+            name: "s",
+            email: "s@gmail.com"
+        },
+        {
+            id: 3,
+            name: "t",
+            email: "t@gmail.com"
+        },
+        {
+            id: 2,
+            name: "i",
+            email: "i@gmail.com"
+        }
+
+        ] 
+        callback(user);
+    }, 2000);
+}
+function displayUser(user) {
+    user.forEach((ele) => {
+        console.log(`user id: ${ele.id}`)
+        console.log(`user id: ${ele.name}`)
+        console.log(`user id: ${ele.email}`)
+    });
+}
+
+getUserData(1, displayUser);
+
+
+</script>
+</html>
+
+
+
